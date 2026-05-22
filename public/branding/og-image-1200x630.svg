@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">F&#7865;LA&#193; Atelier Open Graph image</title>
+  <desc id="desc">Brand card for F&#7865;LA&#193; Atelier</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fffaf5" />
+      <stop offset="100%" stop-color="#f0e6dd" />
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eedfd3" />
+      <stop offset="100%" stop-color="#d39874" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#f5eee6" />
+  <rect x="42" y="42" width="1116" height="546" fill="url(#paper)" stroke="#d8c4b4" stroke-width="2" />
+  <rect x="78" y="78" width="330" height="474" fill="url(#panel)" />
+  <path
+    d="M231 148c-32 0-56 25-56 60 0 28 12 49 34 66-30 27-46 66-46 117 0 66 32 115 95 149m53-5c54-31 81-82 81-152 0-50-15-89-45-116 19-16 29-37 29-63 0-34-23-58-56-58-30 0-53 24-53 58 0 26 9 46 27 62-31 28-46 67-46 117 0 69 28 119 85 151"
+    fill="none"
+    stroke="#211613"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="7"
+  />
+  <path
+    d="M110 470c66-38 127-52 182-44m-101-215c20 16 42 25 67 28m-9 102c30 16 61 20 93 11"
+    fill="none"
+    stroke="#fffaf5"
+    stroke-linecap="round"
+    stroke-width="6"
+    opacity="0.66"
+  />
+  <text
+    x="474"
+    y="224"
+    fill="#211613"
+    font-family="'Brush Script MT', 'Segoe Script', 'Lucida Handwriting', 'Snell Roundhand', cursive"
+    font-size="98"
+    letter-spacing="0.6"
+  >
+    F&#7865;LA&#193; Atelier
+  </text>
+  <text
+    x="478"
+    y="294"
+    fill="#7f5b49"
+    font-family="Arial, sans-serif"
+    font-size="26"
+    letter-spacing="10"
+  >
+    EDITORIAL FASHION ATELIER
+  </text>
+  <text
+    x="478"
+    y="382"
+    fill="#211613"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="42"
+    font-style="italic"
+  >
+    Textile relief. Pattern engineering.
+  </text>
+  <text
+    x="478"
+    y="432"
+    fill="#211613"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="42"
+    font-style="italic"
+  >
+    Couture mastery.
+  </text>
+  <text
+    x="478"
+    y="506"
+    fill="#6b5b50"
+    font-family="Arial, sans-serif"
+    font-size="26"
+  >
+    Quiet studies in material, structure, and finish.
+  </text>
+</svg>

@@ -1,0 +1,27 @@
+{
+  "name": "F\u1eb9LA\u00c1 Atelier",
+  "short_name": "F\u1eb9LA\u00c1",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5eee6",
+  "theme_color": "#d39874",
+  "icons": [
+    {
+      "src": "/branding/favicon-32x32.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/branding/android-chrome-192x192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/branding/android-chrome-512x512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

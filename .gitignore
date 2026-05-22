@@ -1,0 +1,80 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+.open-next
+_functions
+# testing
+/coverage
+.env 
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+#.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# docs
+*.md
+!README.md
+!audit.md
+!BACKEND_ARCHITECTURE_PLAN.md
+!IMPLEMENTATION_PHASES.md
+!finalizeplan.md
+!PLACEHOLDERS.md
+!IMPLEMENTATION_CHECKLIST.md
+!LEGAL_LAUNCH_CHECKLIST.md
+
+# dependencies (recursive)
+**/node_modules/
+
+# common generated artifacts (recursive)
+**/.next/
+**/.next-build/
+**/.open-next/
+**/.wrangler/
+**/coverage/
+**/dist/
+**/build/
+**/out/
+**/.cache/
+**/*.tsbuildinfo
+
+# common local env files
+**/.env
+**/.env.local
+**/.env.production
+**/.env.development
+**/.env.test
+**/.env.*.local
+!**/.env.example
+
+# local archive of the original export during migration
+src/imports/

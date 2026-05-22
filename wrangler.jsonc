@@ -1,0 +1,54 @@
+/**
+ * Wrangler config for FelaaAtelier (OpenNext on Workers).
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "felaaatelier-app",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-03-24",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "workers_dev": true,
+  "preview_urls": true,
+  "observability": {
+    "enabled": true
+  },
+  "routes": [],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".open-next/assets"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "felaaatelier-app"
+    }
+  ],
+  "vars": {
+    "NEXT_PUBLIC_ENVIRONMENT": "production",
+    "NEXT_PUBLIC_SITE_URL": "https://felaaatelier.example.com",
+    "NEXT_PUBLIC_BUSINESS_NAME": "FelaaAtelier",
+    "NEXT_PUBLIC_BUSINESS_LOCATION": "London, United Kingdom",
+    "NEXT_PUBLIC_CONTACT_EMAIL": "hello@example.com"
+  },
+  "env": {
+    "staging": {
+      "name": "felaaatelier-app-staging",
+      "workers_dev": true,
+      "preview_urls": true,
+      "routes": [],
+      "services": [
+        {
+          "binding": "WORKER_SELF_REFERENCE",
+          "service": "felaaatelier-app-staging"
+        }
+      ],
+      "vars": {
+        "NEXT_PUBLIC_ENVIRONMENT": "staging",
+        "NEXT_PUBLIC_SITE_URL": "https://staging-felaaatelier.example.com",
+        "NEXT_PUBLIC_BUSINESS_NAME": "FelaaAtelier",
+        "NEXT_PUBLIC_BUSINESS_LOCATION": "London, United Kingdom",
+        "NEXT_PUBLIC_CONTACT_EMAIL": "hello@example.com"
+      }
+    }
+  }
+}
