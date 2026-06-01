@@ -16,7 +16,7 @@ export const navigationItems: NavigationItem[] = [
   { href: "/pattern-engineering", label: "Pattern" },
   { href: "/atelier", label: "Maker's Kit" },
   { href: "/journal", label: "Journal" },
-  { href: "/store", label: "Collect" },
+  { href: "/store", label: "Boutique" },
 ];
 
 export const publicRoutePaths = [
