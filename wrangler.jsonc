@@ -6,7 +6,7 @@
   "name": "felaaatelier",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-03-24",
-  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "compatibility_flags": ["nodejs_compat"],
   "build": {
     "command": "npm run build:edge",
     "cwd": "./"
@@ -29,9 +29,11 @@
   ],
   "vars": {
     "NEXT_PUBLIC_ENVIRONMENT": "production",
+    // TODO: Replace with your real Workers URL, e.g. https://felaaatelier.<account>.workers.dev
     "NEXT_PUBLIC_SITE_URL": "https://felaaatelier.example.com",
     "NEXT_PUBLIC_BUSINESS_NAME": "FelaaAtelier",
     "NEXT_PUBLIC_BUSINESS_LOCATION": "London, United Kingdom",
+    // TODO: Replace with your real contact email
     "NEXT_PUBLIC_CONTACT_EMAIL": "hello@example.com"
   },
   "env": {
@@ -48,6 +50,7 @@
       ],
       "vars": {
         "NEXT_PUBLIC_ENVIRONMENT": "staging",
+        // TODO: Replace with your real staging Workers URL
         "NEXT_PUBLIC_SITE_URL": "https://staging-felaaatelier.example.com",
         "NEXT_PUBLIC_BUSINESS_NAME": "FelaaAtelier",
         "NEXT_PUBLIC_BUSINESS_LOCATION": "London, United Kingdom",
