@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import {
   atelierSections,
   homeHighlights,
   homeStudioNotes,
   journalEntries,
+  readyToCollectItems,
 } from "@/lib/content";
 import { SectionHeading } from "@/components/section-heading";
 
@@ -24,108 +25,7 @@ const heroSections = [
   },
 ];
 
-const homeEventMeta = [
-  {
-    label: "What",
-    value: (
-      <>
-        <span className="text-lg font-normal uppercase">GLP Presents</span>
-        <br />
-        <span className="block text-3xl font-semibold uppercase">Soulcial Art Exhibit</span>
-      </>
-    ),
-  },
-  { label: "When", value: "Fri, Jun 2026\n1pm-7pm" },
-  { label: "Where", value: "Liverpool, Secret Location, UK" },
-];
-
-const homeEventTiles = [
-  {
-    title: "Lookbook",
-    subtitle: "Spring 26",
-    image: "/media/home-triptych-figure.svg",
-    className: "lg:col-span-1",
-    type: "image" as const,
-  },
-  {
-    title: "T-shirt",
-    subtitle: "Spring 26",
-    image: "/media/couture-mastery.svg",
-    className: "lg:col-span-1",
-    type: "image" as const,
-  },
-  {
-    title: "Art",
-    className: "bg-ink text-paper lg:col-span-1",
-    type: "label" as const,
-  },
-  {
-    title: "Tote",
-    subtitle: "Spring 26",
-    image: "/media/pattern-engineering.svg",
-    className: "lg:col-span-1",
-    type: "image" as const,
-  },
-  {
-    title: "Clothing",
-    className: "bg-paper lg:col-span-1",
-    type: "label" as const,
-  },
-  {
-    title: "Live session",
-    subtitle: "Archive room",
-    image: "/media/home-hero.svg",
-    className: "lg:col-span-1",
-    type: "image" as const,
-  },
-  {
-    title: "Zines",
-    className: "bg-[#efe4d1] lg:col-span-1",
-    type: "label" as const,
-  },
-  {
-    title: "Mixtape",
-    subtitle: "Spring 26",
-    image: "/media/journal-entry.svg",
-    className: "lg:col-span-1",
-    type: "image" as const,
-  },
-  {
-    title: "Live music",
-    className: "bg-[#98a57d] lg:col-span-1",
-    type: "label" as const,
-  },
-  {
-    title: "Poster",
-    subtitle: "Studio drop",
-    image: "/media/textile-relief.svg",
-    className: "lg:col-span-1",
-    type: "image" as const,
-  },
-  {
-    title: "Flavours",
-    className: "bg-[#d8cfc0] lg:col-span-1",
-    type: "label" as const,
-  },
-  {
-    title: "From the Instagram",
-    subtitle: "Open feed",
-    className: "bg-ink text-paper lg:col-span-1",
-    type: "label" as const,
-  },
-  {
-    title: "Artefacts",
-    className: "bg-[#efe4d1] lg:col-span-2",
-    type: "label" as const,
-  },
-  {
-    title: "Text",
-    subtitle: "Spring 26",
-    image: "/media/home-triptych-fashion.svg",
-    className: "lg:col-span-2",
-    type: "image" as const,
-  },
-];
+const featuredReadyToCollectItems = readyToCollectItems.slice(0, 4);
 
 export function HomeView() {
   return (
@@ -136,9 +36,9 @@ export function HomeView() {
             <div className="absolute left-0 top-2.5 hidden xl:flex xl:flex-col xl:gap-2.5">
               <div
                 aria-hidden="true"
-                className="flex h-10 w-10 items-center justify-center bg-ink text-paper"
+                className="flex h-10 w-10 items-center justify-center bg-ink text-xs uppercase tracking-editorial text-paper"
               >
-                <Instagram size={18} />
+                F
               </div>
               <div
                 aria-hidden="true"
@@ -248,60 +148,6 @@ export function HomeView() {
               Open atelier route
             </Link>
           </div>
-        </div>
-      </section>
-
-      <section className="mx-auto flex w-full max-w-content flex-col gap-2.5 px-5 pb-6 lg:px-8">
-        <div className="grid gap-2.5 border-b border-line pb-2.5 lg:grid-cols-3">
-          {homeEventMeta.map((item, index) => (
-            <div
-              key={item.label}
-              className={`flex flex-col items-center gap-2.5 px-4 py-2.5 text-center ${
-                index < homeEventMeta.length - 1 ? "lg:border-r lg:border-line" : ""
-              }`}
-            >
-              <p className="text-[10px] uppercase tracking-editorial text-muted">{item.label}</p>
-              <p className="whitespace-pre-line text-3xl font-semibold uppercase leading-tight text-ink">
-                {item.value}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid gap-2.5 lg:grid-cols-4">
-          {homeEventTiles.map((tile) => (
-            <article
-              key={`${tile.title}-${tile.subtitle ?? "tile"}`}
-              className={`relative min-h-[11rem] border border-line ${tile.className}`}
-            >
-              {tile.type === "image" ? (
-                <>
-                  <div className="absolute inset-0">
-                    <Image
-                      src={tile.image}
-                      alt={tile.title}
-                      fill
-                      className="object-cover"
-                      sizes="(min-width: 1024px) 25vw, 50vw"
-                    />
-                  </div>
-                  <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-ink/72 px-2.5 py-2 text-[10px] uppercase tracking-editorial text-paper">
-                    <span>{tile.title}</span>
-                    <span>{tile.subtitle}</span>
-                  </div>
-                </>
-              ) : (
-                <div className="flex h-full items-center justify-center p-3 text-center">
-                  <div className="flex flex-col gap-1">
-                    <p className="text-2xl font-semibold uppercase leading-tight">{tile.title}</p>
-                    {tile.subtitle ? (
-                      <p className="text-[10px] uppercase tracking-editorial">{tile.subtitle}</p>
-                    ) : null}
-                  </div>
-                </div>
-              )}
-            </article>
-          ))}
         </div>
       </section>
 
@@ -432,6 +278,97 @@ export function HomeView() {
             >
               Go to journal
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-canvas">
+        <div className="mx-auto flex w-full max-w-content flex-col gap-2.5 px-5 py-14 lg:px-8">
+          <div className="grid gap-2.5 lg:grid-cols-[0.86fr_1.14fr]">
+            <div className="flex flex-col justify-between border border-line bg-paper/90 p-6 shadow-card sm:p-8">
+              <SectionHeading
+                eyebrow="Ready to Collect"
+                title="Featured pieces available now"
+                description="A focused edit of ready-to-order works selected from the Collect room: wearable forms, surface studies, and framed pieces available without a commission timeline."
+              />
+
+              <div className="mt-8 grid gap-2.5 border-y border-line py-4 sm:grid-cols-3">
+                <div>
+                  <p className="text-[10px] uppercase tracking-editorial text-muted">Edit</p>
+                  <p className="mt-2 font-display text-3xl italic leading-tight text-ink">
+                    {featuredReadyToCollectItems.length} pieces
+                  </p>
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-editorial text-muted">Status</p>
+                  <p className="mt-2 font-display text-3xl italic leading-tight text-ink">
+                    Ready now
+                  </p>
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-editorial text-muted">Route</p>
+                  <p className="mt-2 font-display text-3xl italic leading-tight text-ink">
+                    Collect
+                  </p>
+                </div>
+              </div>
+
+              <Link
+                href="/store"
+                className="mt-8 inline-flex items-center justify-center gap-2 self-start border border-line bg-paper px-5 py-3 text-xs uppercase tracking-editorial text-ink transition hover:border-bronze hover:text-bronze"
+              >
+                View pieces
+                <ArrowUpRight size={15} aria-hidden="true" />
+              </Link>
+            </div>
+
+            <div className="grid gap-2.5 sm:grid-cols-2">
+              {featuredReadyToCollectItems.map((piece, index) => (
+                <Link
+                  key={piece.slug}
+                  href="/store"
+                  className={`group border border-line bg-paper p-3 shadow-card transition hover:-translate-y-1 hover:border-bronze ${
+                    index === 0 ? "sm:row-span-2" : ""
+                  }`}
+                >
+                  <div
+                    className={`relative overflow-hidden bg-blush ${
+                      index === 0 ? "aspect-[4/5] sm:h-full sm:min-h-[29rem]" : "aspect-[4/3]"
+                    }`}
+                  >
+                    <Image
+                      src={piece.image}
+                      alt={piece.title}
+                      fill
+                      className="object-cover object-top transition duration-500 group-hover:scale-[1.02]"
+                      sizes={
+                        index === 0
+                          ? "(min-width: 1024px) 36vw, (min-width: 640px) 50vw, 100vw"
+                          : "(min-width: 1024px) 18vw, (min-width: 640px) 50vw, 100vw"
+                      }
+                    />
+                    <div className="absolute inset-x-0 bottom-0 bg-ink/72 px-3 py-2 text-paper">
+                      <div className="flex items-center justify-between gap-3 text-[10px] uppercase tracking-editorial">
+                        <span>{piece.availability}</span>
+                        <span>{piece.price}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-2.5 px-1 pb-1 pt-4">
+                    <p className="text-[11px] uppercase tracking-editorial text-bronze">
+                      {piece.collection}
+                    </p>
+                    <h3 className="font-display text-3xl italic leading-tight text-ink">
+                      {piece.title}
+                    </h3>
+                    <p className="text-sm leading-7 text-muted">{piece.medium}</p>
+                    <span className="text-[11px] uppercase tracking-editorial text-ink">
+                      Check availability
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
