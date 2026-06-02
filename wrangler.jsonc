@@ -3,7 +3,7 @@
  */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "felaaatelier-app",
+  "name": "felaaatelier",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-03-24",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
@@ -24,7 +24,7 @@
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",
-      "service": "felaaatelier-app"
+      "service": "felaaatelier"
     }
   ],
   "vars": {
@@ -36,14 +36,14 @@
   },
   "env": {
     "staging": {
-      "name": "felaaatelier-app-staging",
+      "name": "felaaatelier-staging",
       "workers_dev": true,
       "preview_urls": true,
       "routes": [],
       "services": [
         {
           "binding": "WORKER_SELF_REFERENCE",
-          "service": "felaaatelier-app-staging"
+          "service": "felaaatelier-staging"
         }
       ],
       "vars": {
